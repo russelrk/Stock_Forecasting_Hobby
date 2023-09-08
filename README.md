@@ -1,83 +1,39 @@
+Absolutely, here is a README file without the usage of code blocks:
+
+---
 
 # Stock News Sentiment Analysis
 
-## Project Overview
-This project aims to perform sentiment analysis on stock news headlines scraped from various news websites. It uses web scraping to fetch news headlines and applies sentiment analysis using pre-trained machine learning models from the Hugging Face library to categorize them as positive or negative.
+### Overview
+This project applies web scraping techniques and utilizes pre-trained machine learning models to analyze the sentiment of stock news headlines. The script discerns whether the sentiment behind a stock news headline is positive or negative, providing a basis for further financial analysis.
 
 ### Features
+- **Web Scraping:** Extracts the latest news headlines from specified news portals.
+- **Zero-shot Classification:** Identifies whether a headline pertains to stock news or not.
+- **Sentiment Analysis:** Assesses the sentiment (positive/negative) of stock-related headlines.
 
-- Web scraping to fetch latest news headlines
-- Zero-shot classification to categorize headlines as stock-related or non-stock related
-- Sentiment analysis to categorize stock-related headlines as positive or negative
+### Installation and Setup
 
-## Table of Contents
+#### Prerequisites
+Ensure you have Python 3.8 or higher and pip (Python Package Installer) installed on your system.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+### Usage
 
-## Installation
+1. Modify the "news_url" and "stock_keyword" variables in the "main.py" file to represent the news portal URL and the specific stock keyword you are interested in.
+2. To execute the script, type "python main.py" in your terminal or command prompt and press Enter.
 
-To set up and run the project locally, follow the below steps:
+### Contributing
+Contributions from the community are welcome. To contribute:
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Submit a pull request once your changes are ready.
 
-### Prerequisites
+Ensure your code adheres to the project’s code style and that all tests pass before submitting your pull request.
 
-- Python 3.8 or higher
-- Pip (Python Package Installer)
+### License
+This project operates under the MIT License. Refer to the LICENSE file for more information.
 
-### Step-by-step Guide
-
-1. Clone the repository to your local machine:
-
-    ```sh
-    git clone https://github.com/your-github-username/stock-news-sentiment-analysis.git
-    ```
-
-2. Change directory to the project root:
-
-    ```sh
-    cd stock-news-sentiment-analysis
-    ```
-
-3. Install the necessary Python packages:
-
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-To run the script, use the following command in your terminal:
-
-```sh
-python main.py
-```
-
-In `main.py`, update the `news_url` and `stock_keyword` variables with the news portal URL and the stock keyword you are interested in, respectively.
-
-## Contributing
-
-We welcome contributions from the community. To contribute:
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
-
-Before submitting a pull request, please ensure that your code is well-formatted and has passed all the tests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-- Your Name – YourEmail@domain.com
-- Project Link: https://github.com/your-github-username/stock-news-sentiment-analysis
-
-## Acknowledgments
-
+### Acknowledgments
+Special thanks to:
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
