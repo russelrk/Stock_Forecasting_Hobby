@@ -1,4 +1,4 @@
-```markdown
+
 # Stock News Sentiment Analysis
 
 ## Project Overview
