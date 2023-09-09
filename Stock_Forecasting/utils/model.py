@@ -1,6 +1,18 @@
 from tensorflow.keras.layers import LSTM, Conv1D, MaxPooling1D, Flatten, Dense, Input
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
+import logging
+
+# Create a logger with a specific name
+logger = logging.getLogger(__name__)
+
+# Configure logger settings (you can customize these settings)
+logging.basicConfig(
+    level=logging.INFO,  # Set the log level to INFO
+    format='%(asctime)s [%(levelname)s] %(module)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
 
 def build_stock_prediction_model(n_steps, num_features, filters=64, kernel_size=3, lstm_units=50):
     """
@@ -39,5 +51,5 @@ def build_stock_prediction_model(n_steps, num_features, filters=64, kernel_size=
         return model
 
     except Exception as e:
-        print(f"Error building the model: {e}")
+        logger.error(f"Error building the model: {e}")
         return None
