@@ -1,7 +1,7 @@
-from scraper import scrape_headlines
-from classifier import classify_headlines
-from analyzer import analyze_sentiment
-from utils import configure_logging
+from utils.scraper import scrape_headlines
+from utils.classifier import classify_headlines
+from utils.analyzer import analyze_sentiment
+from utils.utils import configure_logging
 
 if __name__ == "__main__":
     # Replace with the actual URL of the CNBC news portal you want to analyze
