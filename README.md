@@ -2,6 +2,7 @@
 
 ### Overview
 In this project, we harness the power of web scraping and pre-trained language models to perform sentiment analysis on stock news headlines. Furthermore, we implement machine learning algorithms to forecast stock movements using a combination of sentiment analysis results and historical stock data.
+currently I don't include sentiment analysis in the stock forcasting, however, I intend to inlcude this in future
 
 ### Features
 
