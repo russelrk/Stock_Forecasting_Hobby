@@ -1,8 +1,9 @@
 from transformers import pipeline
 import logging
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+
 
 def analyze_sentiment(headlines: list[str]) -> list[tuple]:
     try:
@@ -13,14 +14,14 @@ def analyze_sentiment(headlines: list[str]) -> list[tuple]:
             tokenizer="distilbert-base-uncased-finetuned-sst-2-english"
         )
     except Exception as e:
-        logging.error(f"Failed to load the sentiment analysis model: {e}")
+        logger.error(f"Failed to load the sentiment analysis model: {e}")
         return []
     
     try:
         # Load a pre-trained model for zero-shot classification
         classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
     except Exception as e:
-        logging.error(f"Failed to load the headline classification model: {e}")
+        logger.error(f"Failed to load the headline classification model: {e}")
         return []
     
     sentiment_analysis_results = []
@@ -37,6 +38,6 @@ def analyze_sentiment(headlines: list[str]) -> list[tuple]:
                 sentiment_result = sentiment_analyzer(headline)
                 sentiment_analysis_results.append((headline, sentiment_result))
             except Exception as e:
-                logging.error(f"Failed to analyze sentiment for headline: {headline}. Error: {e}")
+                logger.error(f"Failed to analyze sentiment for headline: {headline}. Error: {e}")
     
     return sentiment_analysis_results
