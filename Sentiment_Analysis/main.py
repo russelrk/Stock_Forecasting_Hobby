@@ -1,9 +1,9 @@
 import argparse
 import logging
-from utils.scraper import scrape_headlines
-from utils.classifier import classify_headlines
-from utils.analyzer import analyze_sentiment
-from utils.utils import configure_logging
+from .utils.scraper import scrape_headlines
+from .utils.classifier import classify_headlines
+from .utils.analyzer import analyze_sentiment
+from .utils.utils import configure_logging
 
 def main(url: str, stock_keyword: str = None) -> dict:
     """Main function to orchestrate the scraping and analysis of headlines.
