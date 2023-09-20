@@ -6,6 +6,15 @@ logging.basicConfig(level=logging.INFO)
 
 
 def analyze_sentiment(headlines: list[str]) -> list[tuple]:
+    """
+    Analyzes the sentiment of a list of headlines and categorizes them as 'stock news' or 'non-stock news' using a zero-shot classifier.
+
+    Parameters:
+    headlines (list[str]): A list of headlines to be analyzed.
+
+    Returns:
+    list[tuple]: A list of tuples where each tuple contains a headline and its sentiment analysis result.
+    """
     try:
         # Load the pre-trained BERT model fine-tuned for sentiment analysis
         sentiment_analyzer = pipeline(
