@@ -16,6 +16,8 @@ def get_stock_news(api_key: str, symbol: str) -> list[str]:
     Returns:
     List[str]: A list of news headlines.
     """
+
+    
     headlines = []
 
     try:
