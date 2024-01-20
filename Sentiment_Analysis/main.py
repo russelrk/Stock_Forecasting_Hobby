@@ -1,11 +1,11 @@
 import argparse
 import logging
-from .utils.scraper import scrape_headlines
+from .utils.scraper import get_stock_news
 from .utils.classifier import classify_headlines
 from .utils.analyzer import analyze_sentiment
 from .utils.utils import configure_logging
 
-def main(url: str, stock_keyword: str = None) -> dict:
+def main(stock_keyword: str = None, api_key: str) -> dict:
     """Main function to orchestrate the scraping and analysis of headlines.
     
     Args:
@@ -15,7 +15,7 @@ def main(url: str, stock_keyword: str = None) -> dict:
     Returns:
     dict: The sentiment analysis results.
     """
-    headlines = scrape_headlines(url)
+    headlines = get_stock_news(api_key = api_key, symbol = stock_keyword) 
 
     if stock_keyword:
         headlines = [headline for headline in headlines if stock_keyword.lower() in headline.lower()]
